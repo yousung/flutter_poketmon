@@ -365,3 +365,501 @@ abstract class _Poketmon implements Poketmon {
   _$$_PoketmonCopyWith<_$_Poketmon> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+PoketmonDetail _$PoketmonDetailFromJson(Map<String, dynamic> json) {
+  return _PoketmonDetail.fromJson(json);
+}
+
+/// @nodoc
+mixin _$PoketmonDetail {
+  DefaultValue? get color => throw _privateConstructorUsedError;
+  List<Language>? get names => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PoketmonDetailCopyWith<PoketmonDetail> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PoketmonDetailCopyWith<$Res> {
+  factory $PoketmonDetailCopyWith(
+          PoketmonDetail value, $Res Function(PoketmonDetail) then) =
+      _$PoketmonDetailCopyWithImpl<$Res, PoketmonDetail>;
+  @useResult
+  $Res call({DefaultValue? color, List<Language>? names});
+
+  $DefaultValueCopyWith<$Res>? get color;
+}
+
+/// @nodoc
+class _$PoketmonDetailCopyWithImpl<$Res, $Val extends PoketmonDetail>
+    implements $PoketmonDetailCopyWith<$Res> {
+  _$PoketmonDetailCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? color = freezed,
+    Object? names = freezed,
+  }) {
+    return _then(_value.copyWith(
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as DefaultValue?,
+      names: freezed == names
+          ? _value.names
+          : names // ignore: cast_nullable_to_non_nullable
+              as List<Language>?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DefaultValueCopyWith<$Res>? get color {
+    if (_value.color == null) {
+      return null;
+    }
+
+    return $DefaultValueCopyWith<$Res>(_value.color!, (value) {
+      return _then(_value.copyWith(color: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_PoketmonDetailCopyWith<$Res>
+    implements $PoketmonDetailCopyWith<$Res> {
+  factory _$$_PoketmonDetailCopyWith(
+          _$_PoketmonDetail value, $Res Function(_$_PoketmonDetail) then) =
+      __$$_PoketmonDetailCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({DefaultValue? color, List<Language>? names});
+
+  @override
+  $DefaultValueCopyWith<$Res>? get color;
+}
+
+/// @nodoc
+class __$$_PoketmonDetailCopyWithImpl<$Res>
+    extends _$PoketmonDetailCopyWithImpl<$Res, _$_PoketmonDetail>
+    implements _$$_PoketmonDetailCopyWith<$Res> {
+  __$$_PoketmonDetailCopyWithImpl(
+      _$_PoketmonDetail _value, $Res Function(_$_PoketmonDetail) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? color = freezed,
+    Object? names = freezed,
+  }) {
+    return _then(_$_PoketmonDetail(
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as DefaultValue?,
+      names: freezed == names
+          ? _value._names
+          : names // ignore: cast_nullable_to_non_nullable
+              as List<Language>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_PoketmonDetail implements _PoketmonDetail {
+  _$_PoketmonDetail({this.color, final List<Language>? names}) : _names = names;
+
+  factory _$_PoketmonDetail.fromJson(Map<String, dynamic> json) =>
+      _$$_PoketmonDetailFromJson(json);
+
+  @override
+  final DefaultValue? color;
+  final List<Language>? _names;
+  @override
+  List<Language>? get names {
+    final value = _names;
+    if (value == null) return null;
+    if (_names is EqualUnmodifiableListView) return _names;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'PoketmonDetail(color: $color, names: $names)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_PoketmonDetail &&
+            (identical(other.color, color) || other.color == color) &&
+            const DeepCollectionEquality().equals(other._names, _names));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, color, const DeepCollectionEquality().hash(_names));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PoketmonDetailCopyWith<_$_PoketmonDetail> get copyWith =>
+      __$$_PoketmonDetailCopyWithImpl<_$_PoketmonDetail>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_PoketmonDetailToJson(
+      this,
+    );
+  }
+}
+
+abstract class _PoketmonDetail implements PoketmonDetail {
+  factory _PoketmonDetail(
+      {final DefaultValue? color,
+      final List<Language>? names}) = _$_PoketmonDetail;
+
+  factory _PoketmonDetail.fromJson(Map<String, dynamic> json) =
+      _$_PoketmonDetail.fromJson;
+
+  @override
+  DefaultValue? get color;
+  @override
+  List<Language>? get names;
+  @override
+  @JsonKey(ignore: true)
+  _$$_PoketmonDetailCopyWith<_$_PoketmonDetail> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Language _$LanguageFromJson(Map<String, dynamic> json) {
+  return _Language.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Language {
+  DefaultValue get language => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $LanguageCopyWith<Language> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LanguageCopyWith<$Res> {
+  factory $LanguageCopyWith(Language value, $Res Function(Language) then) =
+      _$LanguageCopyWithImpl<$Res, Language>;
+  @useResult
+  $Res call({DefaultValue language, String name});
+
+  $DefaultValueCopyWith<$Res> get language;
+}
+
+/// @nodoc
+class _$LanguageCopyWithImpl<$Res, $Val extends Language>
+    implements $LanguageCopyWith<$Res> {
+  _$LanguageCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? language = null,
+    Object? name = null,
+  }) {
+    return _then(_value.copyWith(
+      language: null == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as DefaultValue,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DefaultValueCopyWith<$Res> get language {
+    return $DefaultValueCopyWith<$Res>(_value.language, (value) {
+      return _then(_value.copyWith(language: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_LanguageCopyWith<$Res> implements $LanguageCopyWith<$Res> {
+  factory _$$_LanguageCopyWith(
+          _$_Language value, $Res Function(_$_Language) then) =
+      __$$_LanguageCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({DefaultValue language, String name});
+
+  @override
+  $DefaultValueCopyWith<$Res> get language;
+}
+
+/// @nodoc
+class __$$_LanguageCopyWithImpl<$Res>
+    extends _$LanguageCopyWithImpl<$Res, _$_Language>
+    implements _$$_LanguageCopyWith<$Res> {
+  __$$_LanguageCopyWithImpl(
+      _$_Language _value, $Res Function(_$_Language) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? language = null,
+    Object? name = null,
+  }) {
+    return _then(_$_Language(
+      language: null == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as DefaultValue,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_Language implements _Language {
+  _$_Language({required this.language, required this.name});
+
+  factory _$_Language.fromJson(Map<String, dynamic> json) =>
+      _$$_LanguageFromJson(json);
+
+  @override
+  final DefaultValue language;
+  @override
+  final String name;
+
+  @override
+  String toString() {
+    return 'Language(language: $language, name: $name)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Language &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.name, name) || other.name == name));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, language, name);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_LanguageCopyWith<_$_Language> get copyWith =>
+      __$$_LanguageCopyWithImpl<_$_Language>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_LanguageToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Language implements Language {
+  factory _Language(
+      {required final DefaultValue language,
+      required final String name}) = _$_Language;
+
+  factory _Language.fromJson(Map<String, dynamic> json) = _$_Language.fromJson;
+
+  @override
+  DefaultValue get language;
+  @override
+  String get name;
+  @override
+  @JsonKey(ignore: true)
+  _$$_LanguageCopyWith<_$_Language> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+DefaultValue _$DefaultValueFromJson(Map<String, dynamic> json) {
+  return _DefaultValue.fromJson(json);
+}
+
+/// @nodoc
+mixin _$DefaultValue {
+  String get name => throw _privateConstructorUsedError;
+  String get url => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DefaultValueCopyWith<DefaultValue> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DefaultValueCopyWith<$Res> {
+  factory $DefaultValueCopyWith(
+          DefaultValue value, $Res Function(DefaultValue) then) =
+      _$DefaultValueCopyWithImpl<$Res, DefaultValue>;
+  @useResult
+  $Res call({String name, String url});
+}
+
+/// @nodoc
+class _$DefaultValueCopyWithImpl<$Res, $Val extends DefaultValue>
+    implements $DefaultValueCopyWith<$Res> {
+  _$DefaultValueCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? url = null,
+  }) {
+    return _then(_value.copyWith(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_DefaultValueCopyWith<$Res>
+    implements $DefaultValueCopyWith<$Res> {
+  factory _$$_DefaultValueCopyWith(
+          _$_DefaultValue value, $Res Function(_$_DefaultValue) then) =
+      __$$_DefaultValueCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String name, String url});
+}
+
+/// @nodoc
+class __$$_DefaultValueCopyWithImpl<$Res>
+    extends _$DefaultValueCopyWithImpl<$Res, _$_DefaultValue>
+    implements _$$_DefaultValueCopyWith<$Res> {
+  __$$_DefaultValueCopyWithImpl(
+      _$_DefaultValue _value, $Res Function(_$_DefaultValue) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? url = null,
+  }) {
+    return _then(_$_DefaultValue(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DefaultValue implements _DefaultValue {
+  _$_DefaultValue({required this.name, required this.url});
+
+  factory _$_DefaultValue.fromJson(Map<String, dynamic> json) =>
+      _$$_DefaultValueFromJson(json);
+
+  @override
+  final String name;
+  @override
+  final String url;
+
+  @override
+  String toString() {
+    return 'DefaultValue(name: $name, url: $url)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_DefaultValue &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DefaultValueCopyWith<_$_DefaultValue> get copyWith =>
+      __$$_DefaultValueCopyWithImpl<_$_DefaultValue>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DefaultValueToJson(
+      this,
+    );
+  }
+}
+
+abstract class _DefaultValue implements DefaultValue {
+  factory _DefaultValue(
+      {required final String name,
+      required final String url}) = _$_DefaultValue;
+
+  factory _DefaultValue.fromJson(Map<String, dynamic> json) =
+      _$_DefaultValue.fromJson;
+
+  @override
+  String get name;
+  @override
+  String get url;
+  @override
+  @JsonKey(ignore: true)
+  _$$_DefaultValueCopyWith<_$_DefaultValue> get copyWith =>
+      throw _privateConstructorUsedError;
+}

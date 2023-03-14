@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
+import 'package:poketmon/app/common/loading.dart';
 import 'package:poketmon/app/data/poketmon.dart';
 import 'package:poketmon/app/modules/home/controllers/home_controller.dart';
 import 'package:poketmon/app/routes/app_pages.dart';
@@ -18,7 +19,9 @@ class HomeView extends GetView<HomeController> {
       child: PagedListView<int, Poketmon>(
           pagingController: controller.pageController,
           builderDelegate:
-              PagedChildBuilderDelegate(itemBuilder: (_, poketmon, index) {
+              PagedChildBuilderDelegate(newPageProgressIndicatorBuilder: (_) {
+            return const Loading();
+          }, itemBuilder: (_, poketmon, index) {
             String poketmonIndex = poketmon.url.split('/')[6];
 
             return Padding(

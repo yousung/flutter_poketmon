@@ -34,3 +34,42 @@ Map<String, dynamic> _$$_PoketmonToJson(_$_Poketmon instance) =>
       'name': instance.name,
       'url': instance.url,
     };
+
+_$_PoketmonDetail _$$_PoketmonDetailFromJson(Map<String, dynamic> json) =>
+    _$_PoketmonDetail(
+      color: json['color'] == null
+          ? null
+          : DefaultValue.fromJson(json['color'] as Map<String, dynamic>),
+      names: (json['names'] as List<dynamic>?)
+          ?.map((e) => Language.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_PoketmonDetailToJson(_$_PoketmonDetail instance) =>
+    <String, dynamic>{
+      'color': instance.color,
+      'names': instance.names,
+    };
+
+_$_Language _$$_LanguageFromJson(Map<String, dynamic> json) => _$_Language(
+      language: DefaultValue.fromJson(json['language'] as Map<String, dynamic>),
+      name: json['name'] as String,
+    );
+
+Map<String, dynamic> _$$_LanguageToJson(_$_Language instance) =>
+    <String, dynamic>{
+      'language': instance.language,
+      'name': instance.name,
+    };
+
+_$_DefaultValue _$$_DefaultValueFromJson(Map<String, dynamic> json) =>
+    _$_DefaultValue(
+      name: json['name'] as String,
+      url: json['url'] as String,
+    );
+
+Map<String, dynamic> _$$_DefaultValueToJson(_$_DefaultValue instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'url': instance.url,
+    };

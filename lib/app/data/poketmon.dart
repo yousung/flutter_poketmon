@@ -26,3 +26,32 @@ class Poketmon with _$Poketmon {
   factory Poketmon.fromJson(Map<String, dynamic> json) =>
       _$PoketmonFromJson(json);
 }
+
+@freezed
+class PoketmonDetail with _$PoketmonDetail {
+  factory PoketmonDetail({
+    DefaultValue? color,
+    List<Language>? names,
+  }) = _PoketmonDetail;
+
+  factory PoketmonDetail.fromJson(Map<String, dynamic> json) =>
+      _$PoketmonDetailFromJson(json);
+}
+
+@freezed
+class Language with _$Language {
+  factory Language({required DefaultValue language, required String name}) =
+      _Language;
+
+  factory Language.fromJson(Map<String, dynamic> json) =>
+      _$LanguageFromJson(json);
+}
+
+@freezed
+class DefaultValue with _$DefaultValue {
+  factory DefaultValue({required String name, required String url}) =
+      _DefaultValue;
+
+  factory DefaultValue.fromJson(Map<String, dynamic> json) =>
+      _$DefaultValueFromJson(json);
+}

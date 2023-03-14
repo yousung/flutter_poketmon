@@ -16,4 +16,11 @@ class Api {
 
     return null;
   }
+
+  Future<PoketmonDetail> getPoketmonDetail(String poketmonIndex) async {
+    final response = await _connect
+        .get('https://pokeapi.co/api/v2/pokemon-species/$poketmonIndex/');
+
+    return PoketmonDetail.fromJson(response.body);
+  }
 }
