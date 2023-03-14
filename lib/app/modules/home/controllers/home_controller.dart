@@ -1,24 +1,35 @@
 import 'package:get/get.dart';
+import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:poketmon/app/data/poketmon.dart';
 import 'package:poketmon/app/repo/api.dart';
 
 class HomeController extends GetxController {
   Api api = Api();
-  var count = 0.obs;
-  var next = "".obs;
-  var previous = "".obs;
-  var poketmonList = <Poketmon>[].obs;
+
+  final PagingController<int, Poketmon> pageController =
+      PagingController(firstPageKey: 1);
 
   @override
-  void onReady() async {
-    super.onReady();
-    PoketmonList? poketmonList = await api.poketmonList();
+  void onInit() {
+    pageController.addPageRequestListener((pageKey) async {
+      PoketmonList? poketmonList = await api.poketmonList(page: pageKey);
+      if (poketmonList != null) {
+        if (poketmonList.next != null) {
+          pageController.appendPage(poketmonList.results, pageKey + 1);
+        } else {
+          pageController.appendLastPage(poketmonList.results);
+        }
+      } else {
+        pageController.error = 'error';
+      }
+    });
 
-    if (poketmonList != null) {
-      count.value = poketmonList.count;
-      next.value = poketmonList.next ?? "";
-      previous.value = poketmonList.previous ?? "";
-      this.poketmonList.value = poketmonList.results;
-    }
+    super.onInit();
+  }
+
+  @override
+  void dispose() {
+    pageController.dispose();
+    super.dispose();
   }
 }
